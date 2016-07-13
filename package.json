@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build-css": "node-sass --include-path scss --output-style expanded scss/styles.scss public/css/styles.css",
+    "watch-css": "nodemon --ext scss --exec \"npm run build-css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
