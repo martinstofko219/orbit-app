@@ -6,7 +6,7 @@ var app = express();
 app.set("port", 8080);
 
 // set static middleware
-app.use(express.static(path.join(__dirname, "/")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 // get planets
 app.get("/api/planets", function(req, res) {
