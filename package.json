@@ -1,0 +1,30 @@
+{
+  "name": "orbit-app",
+  "version": "1.0.0",
+  "description": "A simple orbiting spheres app using AngularJS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonny219/orbit-app.git"
+  },
+  "keywords": [
+    "AngularJS"
+  ],
+  "author": "Martin Stofko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonny219/orbit-app/issues"
+  },
+  "homepage": "https://github.com/sonny219/orbit-app#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  }
+}
