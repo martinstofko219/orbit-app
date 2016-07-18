@@ -40,24 +40,24 @@ var planets = [
 		id: 1,
 		name: "Mercury",
 		color: "gray",
-		radius: 2
+		radius: 5
 	},
 	{
 		id: 2,
 		name: "Venus",
 		color: "yellow",
-		radius: 4
+		radius: 12
 	},
 	{
 		id: 3,
 		name: "Earth",
 		color: "blue",
-		radius: 5
+		radius: 15
 	},
 	{
 		id: 4,
 		name: "Mars",
 		color: "red",
-		radius: 3
+		radius: 8
 	}
 ];

@@ -11,6 +11,8 @@
 		
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- stylesheet -->
+		<link href="css/styles.css" rel="stylesheet">
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,9 +22,50 @@
 	    <![endif]-->
 	</head>
 	
-	<body>
+	<body data-ng-app="orbitApp">
+
+		<div class="container">
+			<main class="row" data-ng-controller="orbitController">
+				
+				<div class="col-sm-12 page-header">
+					<h1>Orbit App</h1>
+				</div>
+				
+				<aside class="col-sm-4 sidebar">
+					<h4>Control Bar</h4>
+
+					<p>Current Planet: {{planet.name}} <a data-ng-href="#" data-ng-click="changePlanet()" class="btn btn-link">Change</a></p>
+
+					<div class="form-group">
+						<label for="orbitSpeed">Orbit Speed <small>second per 1 orbit</small></label>
+						<input type="number" data-ng-model="orbitSpeed" class="form-control" id="orbitSpeed">
+					</div><!-- /.form-group -->
+					<hr>
+					<button type="button" class="btn btn-primary btn-block" data-ng-click="toggleOrbit()">Toggle Animation</button>
+				</aside><!-- /.col -->
+				
+				<section class="col-sm-8">
+					<h3>Animation Window</h3>
+
+					<div class="animation-area">
+						<figure id="centerOrb" class="orb orb-center"></figure>
+						<figure id="movingOrb" class="orb orb-moving" orbit-planet="planet"></figure>
+					</div><!-- /.animation-area -->
+					
+				</section><!-- /.col -->
+				
+			</main><!-- /.row -->
+		</div><!-- /.container -->
 		
-		<h1>Orbit App</h1>
-		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+		<!-- AngularJS app files -->
+		<script src="app/app.js"></script>
+		<script src="app/services/planetFactory.js"></script>
+		<script src="app/controllers/orbitController.js"></script>
+		<script src="app/directives/orbitPlanet.js"></script>
 	</body>
 </html>

@@ -1,0 +1,15 @@
+@mixin circle($radius){
+	border-radius: 50%;
+	width: $radius * 2;
+	height: $radius * 2;
+	margin-left: -$radius;
+	margin-right: -$radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color, $inset: false) {
+	@if $inset {
+		box-shadow:inset $x $y $blur $color;
+	} @else {
+		box-shadow: $x $y $blur $color;
+	}
+}

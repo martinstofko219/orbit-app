@@ -7,6 +7,7 @@
     "start": "node server.js",
     "build-css": "node-sass --include-path scss --output-style expanded scss/styles.scss public/css/styles.css",
     "watch-css": "nodemon --ext scss --exec \"npm run build-css\"",
+    "prefix-css": "postcss --use autoprefixer --output public/css/styles.css public/css/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,7 +15,10 @@
     "url": "git+https://github.com/sonny219/orbit-app.git"
   },
   "keywords": [
-    "AngularJS"
+    "AngularJS",
+    "node.js",
+    "scss",
+    "animation"
   ],
   "author": "Martin Stofko",
   "license": "ISC",
@@ -26,7 +30,9 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "node-sass": "^3.8.0",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "postcss-cli": "^2.5.2"
   }
 }
