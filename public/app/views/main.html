@@ -1,0 +1,23 @@
+<aside class="col-sm-4 sidebar">
+	<h4>Control Bar</h4>
+
+	<p>Current Planet: {{planet.name}} <a data-ng-href="#/" data-ng-click="changePlanet()" class="btn btn-link">Change</a></p>
+
+	<div class="form-group">
+		<label for="orbitSpeed">Orbit Speed <small>second per 1 orbit</small></label>
+		<input type="number" data-ng-model="orbitSpeed" class="form-control" id="orbitSpeed">
+		<p class="help-block">Speed resets with new orbit.</p>
+	</div><!-- /.form-group -->
+	<hr>
+	<button type="button" class="btn btn-primary btn-block" data-ng-click="toggleOrbit()">Toggle Animation</button>
+</aside><!-- /.col -->
+
+<section class="col-sm-8">
+	<h3>Animation Window</h3>
+
+	<div class="animation-area">
+		<figure id="centerOrb" class="orb orb-center"></figure>
+		<figure id="movingOrb" class="orb orb-moving" orbit-planet="planet"></figure>
+	</div><!-- /.animation-area -->
+	
+</section><!-- /.col -->

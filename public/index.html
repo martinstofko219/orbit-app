@@ -25,34 +25,14 @@
 	<body data-ng-app="orbitApp">
 
 		<div class="container">
-			<main class="row" data-ng-controller="orbitController">
+			<main class="row">
 				
 				<div class="col-sm-12 page-header">
 					<h1>Orbit App</h1>
 				</div>
 				
-				<aside class="col-sm-4 sidebar">
-					<h4>Control Bar</h4>
-
-					<p>Current Planet: {{planet.name}} <a data-ng-href="#" data-ng-click="changePlanet()" class="btn btn-link">Change</a></p>
-
-					<div class="form-group">
-						<label for="orbitSpeed">Orbit Speed <small>second per 1 orbit</small></label>
-						<input type="number" data-ng-model="orbitSpeed" class="form-control" id="orbitSpeed">
-					</div><!-- /.form-group -->
-					<hr>
-					<button type="button" class="btn btn-primary btn-block" data-ng-click="toggleOrbit()">Toggle Animation</button>
-				</aside><!-- /.col -->
-				
-				<section class="col-sm-8">
-					<h3>Animation Window</h3>
-
-					<div class="animation-area">
-						<figure id="centerOrb" class="orb orb-center"></figure>
-						<figure id="movingOrb" class="orb orb-moving" orbit-planet="planet"></figure>
-					</div><!-- /.animation-area -->
-					
-				</section><!-- /.col -->
+				<!-- for loading angular views -->
+				<div data-ng-view></div>
 				
 			</main><!-- /.row -->
 		</div><!-- /.container -->
@@ -61,6 +41,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<!-- AngularJS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
 
 		<!-- AngularJS app files -->
 		<script src="app/app.js"></script>
