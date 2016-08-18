@@ -1,4 +1,4 @@
-# orbit-app
+# Orbit App
 A simple orbiting spheres app using AngularJS, jQuery, Bootstrap and scss preprocessor.
 
 The backend dummy API is written in node.js with express.
